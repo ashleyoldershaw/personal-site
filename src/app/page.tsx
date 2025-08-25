@@ -1,3 +1,4 @@
+import { DisplayItem } from "@/components/display";
 import { Footer } from "@/components/footer";
 import { Paragraph, Subtitle, Title } from "@/components/text";
 import Image from "next/image";
@@ -37,6 +38,11 @@ export default function Home() {
           efficitur. Donec eu ornare dolor. Pellentesque at dui urna. Mauris nec
           lorem leo.
         </Paragraph>
+        <DisplayItem
+          title={"example"}
+          subtitle={"foobar, barbaz"}
+          body={"Lorem ipsum dolor sit amet"}
+        />
       </main>
       <Footer />
     </div>
