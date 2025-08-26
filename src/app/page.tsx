@@ -1,7 +1,25 @@
-import { DisplayItem } from "@/components/display";
+import { DisplayItemList, DisplayItemProps } from "@/components/display";
 import { Footer } from "@/components/footer";
 import { Paragraph, Subtitle, Title } from "@/components/text";
 import Image from "next/image";
+
+const data: DisplayItemProps[] = [
+  {
+    title: "Lorem ipsum",
+    subtitle: "Dolor sit amet",
+    body: "Morbi congue tellus sit amet elit euismod placerat. Quisque arcu arcu, ultricies non cursus auctor, consectetur non velit.",
+  },
+  {
+    title: "Lorem ipsum",
+    subtitle: "Dolor sit amet",
+    body: "Morbi congue tellus sit amet elit euismod placerat. Quisque arcu arcu, ultricies non cursus auctor, consectetur non velit.",
+  },
+  {
+    title: "Lorem ipsum",
+    subtitle: "Dolor sit amet",
+    body: "Morbi congue tellus sit amet elit euismod placerat. Quisque arcu arcu, ultricies non cursus auctor, consectetur non velit.",
+  },
+];
 
 export default function Home() {
   return (
@@ -38,11 +56,7 @@ export default function Home() {
           efficitur. Donec eu ornare dolor. Pellentesque at dui urna. Mauris nec
           lorem leo.
         </Paragraph>
-        <DisplayItem
-          title={"example"}
-          subtitle={"foobar, barbaz"}
-          body={"Lorem ipsum dolor sit amet"}
-        />
+        <DisplayItemList items={data} />
       </main>
       <Footer />
     </div>
